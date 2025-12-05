@@ -1,23 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+ 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "별내동 포장이사 전문 서비스",
+      "image": "https://도메인/별내동-이사-로고.png",
+      "url": "https://도메인/별내동포장이사",
+      "telephone": "031-123-4567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "경기도 남양주시 별내동 ○○로 ○○",
+        "addressLocality": "별내동",
+        "addressRegion": "경기",
+        "postalCode": "12000",
+        "addressCountry": "KR"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "남양주시"},
+        {"@type": "City", "name": "별내동"},
+        {"@type": "City", "name": "다산동"}
+      ],
+      "priceRange": "₩₩₩",
+      "description": "남양주 별내동 지역 포장이사 전문 – 최신 이사 비용, 서비스 비교, 체크리스트 제공 및 프리미엄 업체 추천"
+    }
+    </script>
+
+    <style>
+        /* GPT-4o Mini Version Style */
+        /* 부드럽고 다채로운 색상 + 계층 잘 보이도록 개선 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; margin:0; padding:0; background:#f0f4f8; color:#333; line-height:1.7; }
+        header, section, footer { max-width:980px; margin:20px auto; padding:25px 30px; background:#ffffff; border-radius:15px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+        h1, h2, h3 { color:#0b3d91; margin-bottom:15px; font-weight:700; }
+        h1 { font-size:2.8rem; text-align:center; padding-bottom:10px; border-bottom:4px solid #a3c4ff; }
+        h2 { font-size:2.2rem; border-left:8px solid #4285f4; padding-left:15px; margin-top:30px; }
+        h3 { font-size:1.6rem; color:#333; margin-top:20px; border-bottom:1px dashed #ccddee; padding-bottom:5px; }
+        p, li, td, th { font-size:1.05rem; }
+        ul, ol { padding-left:25px; margin-bottom:20px; }
+        table { width:100%; border-collapse: collapse; margin:25px 0; font-size:1rem; }
+        th, td { border:1px solid #ccddee; padding:15px; text-align:left; }
+        th { background:#0b3d91; color:#fff; font-weight:700; border-color:#0b3d91; }
+        td { background:#f9fbff; }
+        a { color:#4285f4; text-decoration:none; }
+        a:hover { text-decoration:underline; color:#3367d6; }
+        .btn-cta {
+            display:block; /* Changed to block for full-width emphasis */
+            width:90%;
+            max-width:400px;
+            margin:25px auto;
+            padding:18px 30px;
+            background:#ff6600; /* New accent color for CTA */
+            color:#fff;
+            font-size:1.2rem;
+            font-weight:700;
+            border:none;
+            border-radius:35px;
+            box-shadow:0 8px 15px rgba(255, 102, 0, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor:pointer;
+            text-decoration:none;
+            text-align:center;
+        }
+        .btn-cta:hover {
+            background:#cc5200;
+            transform:translateY(-3px);
+            box-shadow:0 10px 20px rgba(255, 102, 0, 0.5);
+        }
+        .anchor { display:block; position:relative; top:-120px; visibility:hidden; }
+        .trusted-site-link { display: inline-block; margin-right: 15px; font-weight: bold; color: #00796b; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 6px; color: #0b3d91; }
+        .form-group input[type="text"], .form-group input[type="tel"], .form-group input[type="date"], .form-group select, .form-group textarea, .form-group input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccddee;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background: #fcfdff;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+        .required { color:red; margin-left: 5px; }
+        /* 반응형 */
+        @media(max-width:768px) {
+            header, section, footer { margin:10px; padding:15px; }
+            h1 { font-size:2.2rem; }
+            h2 { font-size:1.8rem; }
+            h3 { font-size:1.4rem; }
+            .btn-cta { width:100%; max-width:none; padding:15px 0; }
+            th, td { display: block; width: 100%; box-sizing: border-box; }
+            th { text-align: center; background:#0b3d91; color:#fff; }
+            table, thead, tbody, th, td, tr { display: block; }
+            tr { margin-bottom: 15px; border: 1px solid #ccddee; border-radius: 8px; overflow: hidden; }
+            td:before { content: attr(data-label); float: left; font-weight: bold; color: #4285f4; }
+            td { text-align: right; border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50%; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>남양주 별내동 포장이사 전문 서비스</h1>
+        <p><strong>별내동포장이사</strong>, 성공적인 이사를 위한 **2026년 최신 비용 정보**, **전문 체크리스트** 및 **프리미엄 업체 추천**을 지금 바로 확인하세요. 저희는 남양주 별내 신도시 및 인근 지역(갈매동, 다산동, 퇴계원읍) 이사 전문가입니다.</p>
+        <a class="btn-cta" href="#contact-full">별내동 이사 무료 방문 견적 신청하기</a>
+    </header>
+    
+    <nav aria-label="페이지 내 이동">
+        <section style="padding:15px; background:#f9fbff; border-radius:10px;">
+            <ul style="list-style:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center;">
+                <li style="margin:5px 15px;"><a href="#area">🚀 서비스 지역 및 전문성</a></li>
+                <li style="margin:5px 15px;"><a href="#why">🧐 별내동 포장이사 핵심</a></li>
+                <li style="margin:5px 15px;"><a href="#price-table">💰 2026년 이사 비용 분석</a></li>
+                <li style="margin:5px 15px;"><a href="#checklist">✅ 이사 완벽 체크리스트</a></li>
+                <li style="margin:5px 15px;"><a href="#trust">🔗 신뢰성 외부 자료</a></li>
+                <li style="margin:5px 15px;"><a href="#contact-full">💬 상세 견적 및 상담</a></li>
+            </ul>
+        </section>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="area">
+        <span id="area-anchor" class="anchor"></span>
+        <h2>🚀 남양주 별내동포장이사 서비스 전문 지역 및 범위</h2>
+        <p>저희는 **남양주시 별내동** 지역에 특화된 프리미엄 **별내동포장이사** 서비스를 제공합니다. 특히 **별내신도시** 아파트(별내아이파크, 별내자이, 포스코더샵 등) 및 빌라, 오피스텔 이사에 필요한 현장 노하우와 완벽한 장비를 갖추고 있습니다. 남양주 지역은 신도시 개발로 인해 이사 수요가 매우 높으며, 복잡한 입주 환경과 다양한 건물 형태에 대한 깊은 이해가 필수적입니다.</p>
+
+        <h3>남양주 지역별 주요 이사 서비스 범위</h3>
+        <p>별내동을 중심으로 남양주 전역을 커버하며, 특히 인접한 지역에서는 신속한 이사 서비스를 제공합니다. 주요 서비스 지역은 다음과 같습니다.</p>
+        <div style="column-count: 3; column-gap: 20px; padding:15px; background:#f5f8ff; border-radius:10px;">
+            <ul>
+                <li>**별내동** (별가람, 별내별빛마을)</li>
+                <li>갈매동, 퇴계원읍</li>
+                <li>**다산동** (다산신도시 아파트 이사)</li>
+                <li>평내동, 호평동</li>
+                <li>금곡동, 일패동, 이패동, 삼패동</li>
+            </ul>
+            <ul>
+                <li>와부읍, 진접읍</li>
+                <li>오남읍, 화도읍 (마석)</li>
+                <li>수동면, 조안면</li>
+                <li>도농동, 지금동, 가운동</li>
+                <li>양정동, 진건읍, 금곡리</li>
+            </ul>
+            <ul>
+                <li>**함께 많이 찾는 키워드:**</li>
+                <li>남양주포장이사 비용</li>
+                <li>구리포장이사 견적</li>
+                <li>포천포장이사 추천</li>
+                <li>퇴계원포장이사</li>
+                <li>별내 원룸/투룸 이사</li>
+            </ul>
+        </div>
+    </section>
+    
+    <hr>
+    
+    <section id="why">
+        <span id="why-anchor" class="anchor"></span>
+        <h2>🧐 별내동 포장이사: 일반 이사와의 차이점과 중요성</h2>
+        <p>**포장이사**는 단순히 짐을 옮기는 것을 넘어, 고객의 시간과 노력을 최소화하는 **종합 이사 서비스**입니다. 특히 생활 수준이 높고 가구가 많은 별내신도시 아파트 이사에서는 포장, 운송, 배치, 정리까지 포함하는 프리미엄 서비스가 절대적으로 필요합니다. 일반 이사는 고객이 포장을 담당해야 하지만, 포장이사는 이 모든 과정을 전문가가 진행하여 물품 파손 위험을 줄이고 이사 시간을 단축합니다.</p>
+
+        <h3>별내동 포장이사가 반드시 필요한 5가지 이유</h3>
+        <ol>
+            <li>**시간 절약 및 편의성:** 포장부터 정리까지 모두 대행하므로 고객은 새로운 생활 준비에 집중할 수 있습니다.</li>
+            <li>**물품 안전성 보장:** 전문 포장 자재와 기술을 사용해 파손을 최소화하며, 피해 발생 시 **이사 화물 배상 책임 보험**으로 완벽히 보상합니다.</li>
+            <li>**가구/가전 전문 분해·설치:** 침대, 붙박이장, 에어컨 등 전문 지식이 필요한 품목의 분해 및 재설치를 안전하게 처리합니다.</li>
+            <li>**청소 서비스 연계:** 이사 후 발생할 수 있는 폐기물 처리, 청소까지 원스톱으로 처리하여 입주/퇴거 준비를 간소화합니다.</li>
+            <li>**현장 노하우:** 별내동 아파트의 복잡한 **이사 시간 지정**, **엘리베이터 예약**, **주차 공간 확보** 등의 규정을 정확히 알고 신속하게 대응합니다.</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="price-table">
+        <span id="price-table-anchor" class="anchor"></span>
+        <h2>💰 2026년 별내동포장이사 유형별 비용 및 가격 결정 요인 분석</h2>
+        <p>2026년 별내동 지역의 평균 이사 비용은 인건비와 유류비 상승, 그리고 주택 유형 및 짐의 양에 따라 변동 폭이 클 것으로 예상됩니다. 아래 표는 일반적인 **별내동 포장이사**의 유형별 예상 비용을 정리한 것이며, **정확한 견적은 반드시 방문 상담을 통해 확인**해야 합니다.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th data-label="서비스 유형">서비스 유형</th>
+                    <th data-label="평균 예상 비용 (2026년 기준)">평균 예상 비용 (2026년 기준)</th>
+                    <th data-label="핵심 서비스 내용">핵심 서비스 내용</th>
+                    <th data-label="추가 비용 주요 항목">추가 비용 주요 항목</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="서비스 유형">원룸 일반 이사</td>
+                    <td data-label="평균 예상 비용 (2026년 기준)">₩300,000 ~ ₩500,000</td>
+                    <td data-label="핵심 서비스 내용">운반만 제공. 포장 및 정리 고객 직접 진행.</td>
+                    <td data-label="추가 비용 주요 항목">짐 양 초과, 주말/손 없는 날 할증</td>
+                </tr>
+                <tr>
+                    <td data-label="서비스 유형">투룸 반포장이사</td>
+                    <td data-label="평균 예상 비용 (2026년 기준)">₩500,000 ~ ₩850,000</td>
+                    <td data-label="핵심 서비스 내용">업체: 큰 짐/주요 가구 포장. 고객: 잔짐/생활용품 포장 및 정리.</td>
+                    <td data-label="추가 비용 주요 항목">사다리차 이용료, 에어컨 탈착/설치</td>
+                </tr>
+                <tr>
+                    <td data-label="서비스 유형">**별내 아파트 포장이사 (풀서비스)**</td>
+                    <td data-label="평균 예상 비용 (2026년 기준)">**₩800,000 ~ ₩1,500,000+**</td>
+                    <td data-label="핵심 서비스 내용">**포장, 운반, 배치, 마무리 정리까지 ONE-STOP. 가장 인기 있는 서비스.**</td>
+                    <td data-label="추가 비용 주요 항목">특수 짐(피아노, 대형금고), 짐 보관료, 엘리베이터 유무</td>
+                </tr>
+                <tr>
+                    <td data-label="서비스 유형">이사 보관 이사 (추가)</td>
+                    <td data-label="평균 예상 비용 (2026년 기준)">별도 문의</td>
+                    <td data-label="핵심 서비스 내용">단기/장기 이삿짐 안전 보관. 리모델링, 전세 만기 지연 시 유용.</td>
+                    <td data-label="추가 비용 주요 항목">보관 기간, 보관 창고 환경 (온도/습도)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>가격 결정에 영향을 미치는 상세 요인 (자동완성 키워드 반영)</h3>
+        <ul style="list-style-type: square; column-count: 2;">
+            <li>**이사 시기:** **손 없는 날** 및 봄/가을 성수기에는 10%~30%까지 가격이 할증됩니다. (연관 키워드: 이사철, 이사 성수기)</li>
+            <li>**운반 거리:** 남양주에서 서울, 경기 외곽으로 이동 시 거리에 따른 유류비와 시간이 추가됩니다.</li>
+            <li>**짐의 양과 무게:** 1톤, 2.5톤, 5톤 등 차량의 크기와 작업 인원(2명~5명)이 결정됩니다. (연관 키워드: 5톤 포장이사 가격)</li>
+            <li>**작업 환경:** 고층 아파트의 엘리베이터 유무, 계단 작업, 사다리차 사용료가 큰 비중을 차지합니다.</li>
+            <li>**추가 서비스:** 시스템 에어컨 탈착/재설치, 대형 가구 분해/조립, 입주 청소 등.</li>
+            <li>**포장 자재의 질:** 고가 물품 및 파손 위험이 높은 짐에 대한 특수 포장재 사용 여부.</li>
+        </ul>
+        <a class="btn-cta" href="#contact-full">내 짐에 맞는 별내동 이사 비용 산출하기</a>
+    </section>
+    
+    <hr>
+    
+    <section id="checklist">
+        <span id="checklist-anchor" class="anchor"></span>
+        <h2>✅ 별내동 이사 전/후 완벽 대비 체크리스트 (함께 많이 찾는 키워드 포함)</h2>
+        <p>성공적인 **별내동포장이사**를 위해서는 체계적인 사전 준비가 필수입니다. 이 체크리스트를 활용하여 누락 없이 이사를 준비하세요. 이는 네이버 검색자들이 '함께 많이 찾는' 항목들을 반영하여 구성되었습니다.</p>
+        <ol>
+            <li>**이사 날짜 확정 (4주 전):** 이사 업체 계약 및 사다리차/엘리베이터 사용 예약. (키워드: 이사 예약, 이사 날짜)</li>
+            <li>**짐 정리 및 불필요 물품 폐기 (3주 전):** 짐의 양을 줄여 견적 비용을 절감합니다. 남양주시 폐기물 신고는 미리 진행합니다. (키워드: 가구 버리기, 남양주 폐기물 스티커)</li>
+            <li>**행정 처리 (2주 전):** 전입/전출 신고, 우편물 주소 변경, 자녀 학교 전학 수속을 완료합니다. (키워드: 전입신고 온라인, 우체국 주소 변경)</li>
+            <li>**가전/가구 점검 (1주 전):** 에어컨, 정수기, 인터넷/TV 이전 설치 예약 및 AS 센터에 분해/설치 가능 여부 문의.</li>
+            <li>**귀중품 및 필수품 별도 포장 (이사 당일):** 현금, 신분증, 통장, 약, 휴대폰 충전기 등은 고객이 직접 운반하며, 이삿짐에 섞이지 않도록 주의합니다.</li>
+            <li>**이사 후 점검:** 가구 배치 확인, 파손 유무 확인 및 배상 요청, 공과금/관리비 최종 정산, 신용카드 주소 변경.</li>
+        </ol>
+        
+        <p>저희 **별내동포장이사** 전문팀은 이 체크리스트에 따라 체계적으로 서비스를 진행하며, 고객님의 이사가 원활하게 이루어질 수 있도록 세심한 부분까지 놓치지 않습니다.</p>
+    </section>
+
+    <hr>
+    
+    <section id="trust">
+        <span id="trust-anchor" class="anchor"></span>
+        <h2>🔗 공인된 신뢰성 있는 외부 사이트 및 정보 출처</h2>
+        <p>**별내동포장이사**를 진행하시기 전, 남양주 지역 및 이사 관련 법규에 대한 공신력 있는 정보를 참고하시면 더욱 안전하고 신뢰도 높은 이사를 준비하실 수 있습니다. 저희는 투명하고 정직한 정보 제공을 위해 다음 신뢰할 수 있는 외부 자료를 참고할 것을 권장합니다.</p>
+        <div style="padding:15px; background:#f5f8ff; border-radius:10px;">
+            <p class="trusted-site-link">1. 남양주시청 공식 홈페이지: <a href="https://www.nyj.go.kr/" target="_blank" rel="nofollow noopener">남양주 지역 정보</a></p>
+            <p class="trusted-site-link">2. 공정거래위원회 이사 화물 표준약관: <a href="https://www.ftc.go.kr/www/bizComm_standard.do?key=414&stndCode=27" target="_blank" rel="nofollow noopener">이사 관련 소비자 보호 규정</a></p>
+            <p class="trusted-site-link">3. 국토교통부 물류정책과 이사 관련 법규: <a href="https://www.molit.go.kr/" target="_blank" rel="nofollow noopener">화물 자동차 운수사업법</a></p>
+            <p class="trusted-site-link">4. 네이버 지식백과 - 별내동 지역개요: <a href="https://terms.naver.com/entry.naver?docId=1988899" target="_blank" rel="nofollow noopener">별내동 행정 정보</a></p>
+            <p class="trusted-site-link">5. 행정안전부 전입신고 간편 서비스: <a href="https://www.gov.kr/main?a=AA020InfoCapMastView&applDataBpmId=APM0031805" target="_blank" rel="nofollow noopener">정부24 민원 서비스</a></p>
+        </div>
+        <p style="margin-top: 15px;">이러한 공인된 정보를 통해 고객님은 이사 서비스에 대한 권리와 책임을 명확히 이해하고, 합리적인 계약을 체결할 수 있습니다.</p>
+    </section>
+
+    <hr>
+    
+    <section id="contact-full">
+        <span id="contact-full-anchor" class="anchor"></span>
+        <h2>💬 별내동 포장이사 상세 견적 문의 (체류 시간 극대화 구성)</h2>
+        <p>정확한 **별내동포장이사** 견적은 고객님의 이사 조건에 따라 크게 달라집니다. 아래의 상세 견적 양식을 빠짐없이 입력해주시면, 1:1 **전문 방문 견적 상담**을 통해 가장 합리적인 비용과 최적의 이사 계획을 제시해 드립니다.</p>
+        <form action="/submit-byeollae-moving-quote" method="POST" style="max-width:750px; margin:20px auto; padding:30px; border:2px solid #a3c4ff; border-radius:10px; background:#f9fbff;">
+            
+            <div class="form-group">
+                <label for="name">고객 이름<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="예: 홍길동" />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">연락처<span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678 (하이픈 포함 가능)" pattern="[0-9\-]+" />
+            </div>
+
+            <div class="form-group" style="display:flex; gap: 20px;">
+                <div style="flex:1;">
+                    <label for="move_date">이사 희망 날짜<span class="required">*</span></label>
+                    <input type="date" id="move_date" name="move_date" required />
+                </div>
+                <div style="flex:1;">
+                    <label for="move_type">이사 유형<span class="required">*</span></label>
+                    <select id="move_type" name="move_type" required>
+                        <option value="">선택하세요</option>
+                        <option value="별내 아파트 포장이사">별내 아파트 포장이사</option>
+                        <option value="별내 투룸 포장이사">별내 투룸 포장이사</option>
+                        <option value="별내 원룸 반포장이사">별내 원룸 반포장이사</option>
+                        <option value="보관 이사">보관 이사</option>
+                        <option value="기타">기타 (상세 요청 사항에 기재)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group" style="display:flex; gap: 20px;">
+                <div style="flex:1;">
+                    <label for="current_address_type">현재 주거 형태<span class="required">*</span></label>
+                    <select id="current_address_type" name="current_address_type" required>
+                        <option value="">선택</option>
+                        <option value="아파트">아파트</option>
+                        <option value="빌라">빌라</option>
+                        <option value="단독주택">단독주택</option>
+                        <option value="오피스텔">오피스텔</option>
+                    </select>
+                </div>
+                <div style="flex:1;">
+                    <label for="current_floor">현재 거주 층수</label>
+                    <input type="number" id="current_floor" name="current_floor" placeholder="예: 5 (층수 입력)" min="1" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="current_address_detail">현재 주소지 상세 정보 (예: 별내동 A 아파트 101동)</label>
+                <input type="text" id="current_address_detail" name="current_address_detail" placeholder="이사 출발지 주소 (남양주시 별내동 위주)" />
+            </div>
+
+            <div class="form-group">
+                <label for="arrival_address_detail">도착 주소지 상세 정보 (예: 다산동 B 아파트 201동)</label>
+                <input type="text" id="arrival_address_detail" name="arrival_address_detail" placeholder="이사 도착지 주소 (남양주 외 지역 가능)" />
+            </div>
+
+            <div class="form-group" style="display:flex; gap: 20px;">
+                <div style="flex:1;">
+                    <label for="cargo_amount">짐 예상량 (톤)</label>
+                    <select id="cargo_amount" name="cargo_amount">
+                        <option value="1">1톤 미만 (원룸)</option>
+                        <option value="2.5">2.5톤 (투룸, 소형 아파트)</option>
+                        <option value="5">5톤 (표준 아파트)</option>
+                        <option value="7.5">7.5톤 이상 (대형 이사)</option>
+                    </select>
+                </div>
+                <div style="flex:1;">
+                    <label for="extra_service">사다리차/에어컨 유무</label>
+                    <select id="extra_service" name="extra_service">
+                        <option value="없음">해당 사항 없음</option>
+                        <option value="사다리차 필요">사다리차 필요</option>
+                        <option value="에어컨 설치/철거">에어컨 설치/철거</option>
+                        <option value="모두 필요">사다리차 및 에어컨 모두 필요</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">추가 요청 사항 / 특이사항 기재 (예: 피아노, 돌침대, 입주 청소 필요 등)</label>
+                <textarea id="message" name="message" rows="5" placeholder="이사 날짜, 시간, 특수 짐 등 자세한 내용을 알려주시면 정확한 견적에 도움이 됩니다."></textarea>
+            </div>
+
+            <button type="submit" class="btn-cta" style="background:#0b3d91; box-shadow:0 6px 10px rgba(11, 61, 145, 0.3);">전문 상담 신청서 제출하기</button>
+        </form>
+    </section>
+    
+    <hr>
+
+    <section id="faq">
+        <span id="faq-anchor" class="anchor"></span>
+        <h2>자주 묻는 질문 (FAQ) - 별내동포장이사 관련</h2>
+        <dl>
+            <dt>Q1: **별내동포장이사**는 언제 예약하는 것이 가장 좋나요?</dt>
+            <dd>A: 이사 성수기(3~5월, 9~11월)나 손 없는 날은 최소 1~2개월 전에 예약해야 원하는 날짜와 시간을 확보할 수 있습니다. 비수기는 2~3주 전도 가능합니다.</dd>
+            <dt>Q2: 이사 당일 **포장이사** 작업 시간은 얼마나 걸리나요?</dt>
+            <dd>A: **별내동 아파트 5톤 표준 이사** 기준으로 포장부터 정리까지 약 5시간에서 7시간 정도 소요됩니다. 짐의 양, 운반 거리, 엘리베이터 유무에 따라 달라질 수 있습니다.</dd>
+            <dt>Q3: **2026년** 이사 비용이 전년도 대비 상승할 요인이 있나요?</dt>
+            <dd>A: 네, 인건비 상승과 유류비 변동으로 인해 전반적인 이사 비용의 소폭 상승이 예상됩니다. 최대한 이사 비수기(여름) 평일 오전을 활용하시면 비용을 절감하실 수 있습니다.</dd>
+            <dt>Q4: 파손된 짐에 대한 보상 규정은 어떻게 되나요?</dt>
+            <dd>A: 저희는 **이사 화물 배상 책임 보험**에 가입되어 있습니다. 이사 당일 현장에서 발생한 파손에 대해서는 즉시 담당 팀장에게 알리고, 사진 등 증거 자료를 확보하시면 약관에 따라 신속하게 보상 처리해 드립니다.</dd>
+        </dl>
+    </section>
+
+    <footer>
+        <p>Copyright © 2026 **별내동 포장이사 전문 서비스**. All Rights Reserved. (GPT-4o Mini 기반 최적화)</p>
+        <p>사업자 등록번호: 123-45-67890 | 주소: 남양주시 별내동 | 연락처: <a href="tel:0311234567">031-123-4567</a></p>
+    </footer>
+
+</body>
+  
